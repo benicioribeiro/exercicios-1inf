@@ -1,14 +1,34 @@
 // CRIE SUA SOLUÇÃO ABAIXO ================
-let cliente = " Mariana Silva"
+let cliente = "Mariana Silva"
 let cidade = "Fortaleza"
-let produto = "Notebook pro" 
+let produto = "Notebook Pro" 
 let categoria = "Notebook"
 let preco = 3500
 let quantidade = 2
 let descontoPercentual = 10
-let ValorPago = 7000
+let valorPago = 7000
 
-let subtotal = "preço  × quantidade"
+let subtotal = preco  * quantidade
+let valorDesconto = subtotal * descontoPercentual/100
+let valorFinal = subtotal - valorDesconto
+let troco = valorPago - valorFinal
+
+let resumo =  ` 
+cliente, ${cliente}
+  cidade, ${cidade}
+  produto, ${produto}
+  categoria, ${categoria}
+  preco, ${preco}
+  quantidade, ${quantidade}
+  descontoPercentual, ${descontoPercentual}
+  valorPago, ${valorPago}
+  subtotal, ${subtotal}
+  valorDesconto, ${valorDesconto}
+  valorFinal, R$ ${valorFinal}
+  troco, R$ ${troco}
+  
+  `
+console.log(resumo)
 
 
 
@@ -28,5 +48,5 @@ module.exports = {
   valorDesconto,
   valorFinal,
   troco,
-  resumo
+  resumo,
 }

@@ -5,4 +5,4 @@ if (estoque >= 1) {
 } else {
     const resultado = "Produto esgotado"
 }
- 
+  

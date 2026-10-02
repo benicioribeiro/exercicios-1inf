@@ -5,30 +5,29 @@ const subtotal = 120
 // Parte 1
 let prato = "Opção inválida"
 
-❓ (opcao) {
+switch (opcao) {
 
-  ❓ 1:
+  case 1:
     prato = "Hambúrguer"
-    ❓
+    break
 
-  ❓ 2:
+  case 2:
     prato = "Pizza"
-    ❓
+    break
 
-  ❓ 3:
+  case 3:
     prato = "Suco"
-    ❓
+    break
 
-  ❓:
+  default:
     prato = "Opção inválida"
 }
+console.log(opcao)
 
 // Parte 2
 const frete =
-  subtotal >= 100
-    ❓ "Frete grátis"
-    ❓ "Frete pago"
-
+  subtotal >= 100 ? "Frete grátis":"Frete pago"
+console.log(frete)
 // === FIM DO CÓDIGO =======================
 // === NÃO FAZER NADA ABAIXO DESSA LINHA ===
 module.exports = { prato, frete }

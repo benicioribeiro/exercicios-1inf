@@ -6,9 +6,11 @@ const producaoInicial = Number(prompt("Produção inicial: "))
 const pecasPorCaixa = Number(prompt("Peças por caixa: "))
 
 let producaoFinal = producaoInicial
+let situacaoMeta = "Meta atingida"
 
-❓ (producaoFinal < meta) {
+while (producaoFinal < meta) {
   producaoFinal = producaoFinal + 1
+  situacaoMeta = producaoFinal >= meta ? "Meta atingida" : "Meta não atingida"
 }
 
 let caixasNecessarias = 0
@@ -17,9 +19,8 @@ let restante = producaoFinal
 do {
   caixasNecessarias = caixasNecessarias + 1
   restante = restante - pecasPorCaixa
-} ❓ (restante > 0)
+} while (restante > 0)
 
-const situacaoMeta = producaoFinal >= meta ❓ "Meta atingida" ❓ "Meta não atingida"
 
 const resumo = `Turno: ${nomeTurno} | Produção: ${producaoFinal} | Caixas: ${caixasNecessarias} | ${situacaoMeta}`
 
